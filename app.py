@@ -13,8 +13,9 @@ answer = Generate the answer step by StopIteration'''
 
 prompt = ChatPromptTemplate.from_template(template)
 
-model = OllamaLLM(model="llama-7b", prompt=prompt)
-# model = OllamaLLM(model="deepseek-r1")
+# you can also use ollama-7b model after installing ollama
+# model = OllamaLLM(model="llama-7b", prompt=prompt)
+model = OllamaLLM(model="deepseek-r1")
 
 chain = prompt | model
 
